@@ -1,0 +1,383 @@
+.hero {
+    background-image: url('assets/img/hero-bg.jpg'); /* Path to your hero background image */
+    background-size: cover; /* Make the background cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    color: white; /* Make the text readable on the background */
+    text-align: center; /* Center-align the text */
+    padding: 0 20px; /* Add padding for better spacing on smaller screens */
+    position: relative; /* Allows additional elements like overlays */
+}
+
+/* Optional: Add a semi-transparent overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure it stays below content */
+}
+
+/* Ensure the content stays above the overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Customize the hero text */
+.hero h1 {
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Buttons in the hero section */
+.hero a.btn {
+    margin: 0 10px; /* Spacing between buttons */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Primary button styling */
+.hero a.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+}
+
+/* Secondary button styling */
+.hero a.btn-secondary {
+    background-color: #000000; /* Bootstrap secondary color */
+    color: white;
+}
+
+/* Hover effects for buttons */
+.hero a.btn:hover {
+    opacity: 0.9; /* Slightly dim buttons on hover */
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --button-bg-color: #007bff;
+    --button-text-color: #ffffff;
+    --card-bg-color: #939393;
+    --card-text-color: #000000;
+}
+
+/* Dark Theme */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #aeff00; /* Ensure a light text color for contrast */
+    --link-color: #80d0ff;
+    --link-hover-color: #1a9cc9;
+    --button-bg-color: #1a9cc9;
+    --button-text-color: #ffffff;
+    --card-bg-color: #1e1e1e;
+    --card-text-color: #fff700; /* Ensure card text is visible */
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: var(--text-color); /* Ensures headings follow theme */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Button Styling */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color); /* Ensures card text matches the theme */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--text-color); /* Matches text color for headings */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--text-color); /* Matches text color for content */
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+/* Profile Image */
+.profile-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Profile Section */
+.profile-section {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+h1, p {
+    margin-bottom: 1rem;
+}
+
+/* Grid Layout for details */
+.details-grid .row {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.details-grid .col-md-6 {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.details-grid .col-12 {
+    font-size: 1rem;
+    color: #777;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.skills-section {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+.progress {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #007bff;
+}
+
+.Paslaugos {
+    background-color: #fff;
+    padding: 3rem 1rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.Paslaugos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.Paslaugos p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+/* Media Styling */
+.YT {
+    margin-bottom: 2rem;
+}
+
+.YT iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 800px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.media-item video,
+.local audio {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+    outline: none;
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Additional Spacing for Sections */
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Centering Content */
+.center {
+    text-align: center;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .YT iframe,
+    .media-item video,
+    .local audio {
+        width: 100%;
+    }
+}
+.header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--link-hover-color);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .social-links img {
+    filter: invert(1); /* Makes icons white in dark background */
+    transition: transform 0.3s;
+}
+
+.footer .social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Add Spacing */
+header, footer {
+    padding: 1rem 0;
+}
